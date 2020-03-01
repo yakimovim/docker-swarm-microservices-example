@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend:
+    image: backend
+  frontend:
+    image: frontend
+    environment:
+      BACKEND_ADDRESS: http://backend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend

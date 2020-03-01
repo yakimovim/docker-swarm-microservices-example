@@ -1,0 +1,16 @@
+version: '3'
+services:
+  backend:
+    image: backend
+    deploy:
+      replicas: 2
+  frontend:
+    image: frontend
+    environment:
+      BACKEND_ADDRESS: http://backend
+    ports:
+      - "8083:80"
+    depends_on:
+      - backend
+    deploy:
+      replicas: 2
