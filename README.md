@@ -7,6 +7,6 @@ This repository contains example of microservices system. The system contains tw
 
 Both applications contain Dockerfile files for building images. The example assumes that the names of the images will be `backend` and `frontend`.
 
-'docker-compose.yaml' contains description for Docker Compose. It will run the system there each service will have only one instance.
+`docker-compose.yaml` contains description for Docker Compose. It will run the system there each service will have only one instance.
 
 `docker-swarm.yaml` contains description for Docker Swarm. It allows to have several instance of each service running.
